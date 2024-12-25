@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="styles-registration.css">
+</head>
+<body>
+    <h1>The TaskMngr</h1>
+    <div class="register-form">
+        <h2>Регистрация</h2>
+        <form action="/register" method="post">
+            <input type="text" name="name" placeholder="Имя" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Пароль" required>
+            <button type="submit">Зарегистрироваться</button>
+	    <a href="file:///C:/Users/Stud/Desktop/TheTaskMngr/app/login/login.html">Вход</a>
+        </form>
+    </div>
+    <button id="showTextButton">О нас</button>
+    <div id="textContainer" style="display: none; margin-top: 10px;"></div>
+    <script src="script-registration.js"></script>
+</body>
+</html>
+
