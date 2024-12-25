@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календарь мероприятий</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Добавить мероприятие</h1>
+        <form id="event-form">
+            <label for="event-name">Название мероприятия:</label>
+            <input type="text" id="event-name" name="event-name" required>
+            <label for="event-date">Дата мероприятия:</label>
+            <input type="date" id="event-date" name="event-date" required>
+            <label for="event-time">Время мероприятия:</label>
+            <input type="time" id="event-time" name="event-time" required>
+            <button type="submit">Добавить</button>
+        </form>
+        <h2>Мероприятия</h2>
+        <div class="tabs">
+            <div class="tab">
+                <button class="tablinks" onclick="toggleTab(event, 'past')">
+                    <span>Прошедшие мероприятия</span>
+                    <span class="arrow">&#9660;</span>
+                </button>
+                <div id="past" class="tabcontent">
+                    <h3>Прошедшие мероприятия</h3>
+                    <div id="past-events"></div>
+                </div>
+            </div>
+            <div class="tab">
+                <button class="tablinks" onclick="toggleTab(event, 'future')">
+                    <span>Предстоящие мероприятия</span>
+                    <span class="arrow">&#9660;</span>
+                </button>
+                <div id="future" class="tabcontent">
+                    <h3>Предстоящие мероприятия</h3>
+                    <div id="future-events"></div>
+                </div>
+            </div>
+        </div>
+        <div id='calendar'></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
